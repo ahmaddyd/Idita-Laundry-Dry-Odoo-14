@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="laundry_akunting_view_tree" model="ir.ui.view">
+        <field name="name">Akunting</field>
+        <field name="model">idita.laundry_akunting</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="false">
+                <field name="name"/>
+                <field name="id_akunting"/>
+                <field name="tanggal"/>
+                <field name="debet"/>
+                <field name="kredit"/>
+                <field name="saldo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="laundry_akunting_view_form" model="ir.ui.view">
+        <field name="name">Form Akunting Laundry Idita</field>
+        <field name="model">idita.laundry_akunting</field>
+        <field name="arch" type="xml">
+            <form string="Detail Akunting" edit="false" create="false" delete="false">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="id_akunting"/>
+                        <field name="tanggal"/>
+                        <field name="debet"/>
+                        <field name="kredit"/>
+                        <field name="saldo"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="laundry_akunting_action" model="ir.actions.act_window">
+        <field name="name">Akunting Laundry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">idita.laundry_akunting</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <function model="idita.laundry_akunting" name="compute_id_akunting"/>
+
+    <menuitem
+            id="laundry_akunting_menu_act"
+            name="Akunting"
+            parent="laundry_idita_menu_root"
+            action="laundry_akunting_action"
+            sequence="15"/>
+</odoo>
