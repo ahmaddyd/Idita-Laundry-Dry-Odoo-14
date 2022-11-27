@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem id="laundry_idita_menu_root" name="Laundry and Dry Idita" sequence="10"/>
+        <menuitem id="laundry_idita_menu_root" name="IDITA TEKNIK LAUNDRY" sequence="10"/>
 
         <menuitem id="laundry_master_menu_categ"
                   name="Operasional"

@@ -4,28 +4,28 @@ import json
 
 
 class Iditalaundry(http.Controller):
-    @http.route('/bahancuci', auth='public')
+    @http.route('/bahanlaundry', auth='public')
     def get_models(self, **kwargs):
         order = request.env['idita.jenis_laundry'].search([])
         value = []
         for ord in order:
             value.append({
                 'nama': ord.name,
-                'ukuran': ord.ukuran,
-                'tipe': ord.tipe
+                'size': ord.size,
+                'type': ord.type
             })
         return json.dumps(value)
 
-    @http.route('/caracuci', auth='public')
-    def get_caracuci(self, **kwargs):
-        caracuci = request.env['idita.laundry_teknik'].search([])
+    @http.route('/tekniklaundry', auth='public')
+    def get_laundryteknik(self, **kwargs):
+        laundryteknik = request.env['idita.laundry_teknik'].search([])
         value = []
-        for cc in caracuci:
+        for ab in laundryteknik:
             value.append({
-                'nama': cc.name,
-                'tingkat_kotoran': cc.kotoran,
-                'jenis_air': cc.air,
-                'harga_per_kg': cc.harga
+                'nama': ab.name,
+                'tingkat_kotor': ab.tingkat_kotor,
+                'metode_laundry': ab.metode_laundry,
+                'harga_per_kg': ab.harga
             })
         return json.dumps(value)
 

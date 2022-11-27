@@ -16,7 +16,7 @@ class Akunting(models.Model):
     @api.depends('debet', 'kredit')
     def _compute_saldo(self):
         for record in self:
-            prev = self.search_read([('id', '<', record.id)], limit=1, order='date desc')
+            prev = self.search_read([('id', '<', record.id)], limit=1, order='tanggal desc')
             prev_saldo = prev[0]['saldo'] if prev else 0
             record.saldo = prev_saldo + record.kredit - record.debet
 

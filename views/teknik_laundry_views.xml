@@ -8,9 +8,9 @@
                 <tree>
                     <field name="name"/>
                     <field name="harga"/>
-                    <field name="kotoran"/>
-                    <field name="air"/>
-                    <field name="tersedia"/>
+                    <field name="tingkat_kotor"/>
+                    <field name="metode_laundry"/>
+                    <field name="available"/>
                     <field name="teknikpencucian"/>
                 </tree>
             </field>
@@ -27,19 +27,19 @@
                                 <group colspan='2'>
                                     <separator string="TEKNIK DAN BAHAN"/>
                                     <field name="name"/>
-                                    <field name="air"/>
+                                    <field name="metode_laundry"/>
                                 </group>
                                 <group colspan='2'>
-                                    <separator string="KOTORAN"/>
-                                    <field name="kotoran"/>
+                                    <separator string="TIPE KOTOR"/>
+                                    <field name="tingkat_kotor"/>
                                     <field name="harga"/>
-                                    <field name="tersedia"/>
+                                    <field name="available"/>
                                 </group>
                                 <notebook colspan='4'>
                                     <page string="DESKRIPSI PENCUCIAN">
                                         <field name="teknikpencucian"/>
                                     </page>
-                                    <page string="JENIS CUCIAN">
+                                    <page string="JENIS LAUNDRY">
                                         <field name="models_ids"/>
                                     </page>
                                     <page string="MANAGER">
@@ -54,23 +54,20 @@
         </record>
 
         <record id="laundry_teknik_action" model="ir.actions.act_window">
-            <field name="name">Jenis Teknik Laundry and Dry Idita</field>
+            <field name="name">Jenis Teknik Laundry Idita</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">idita.laundry_teknik</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_smiling_face">
-                    Diisi dengan daftar CARA cucian
+                    Silahkan masukan Teknik dan Bahan serta Tingkat Kotor Laundry
                 </p>
                 <p>
                 </p>
             </field>
         </record>
 
-        <menuitem id="laundry_teknik_menu_act"
-                  name="Teknik Cucian"
-                  parent="laundry_master_menu_categ"
-                  action="laundry_teknik_action"
-                  sequence="20"/>
+        <menuitem id="laundry_teknik_menu_act" name="Jenis Teknik Laundry" parent="laundry_master_menu_categ"
+                  action="laundry_teknik_action" sequence="20"/>
     </data>
 </odoo>
