@@ -3,3 +3,6 @@ access_idita_laundry_order,access.idita.laundry_order,model_idita_laundry_order,
 access_idita_laundry_detail,access.idita.laundry_detail,model_idita_laundry_detail,,1,1,1,1
 access_idita_laundry_selesai,access.idita.laundry_selesai,model_idita_laundry_selesai,,1,1,1,1
 access_idita_laundry_akunting,access.idita.laundry_akunting,model_idita_laundry_akunting,,1,1,1,1
+access_idita_model_laundry,access.idita.model_laundry,model_idita_model_laundry,,1,1,1,1
+access_idita_jenis_laundry,access.idita.jenis_laundry,model_idita_jenis_laundry,,1,1,1,1
+access_idita_laundry_teknik,access.idita.laundry_teknik,model_idita_laundry_teknik,,1,1,1,1

@@ -29,6 +29,8 @@
         'views/order_views.xml',
         'views/akunting_views.xml',
         'views/laundry_selesai_views.xml',
+        'views/jenis_laundry_views.xml',
+        'views/teknik_laundry_views.xml',
         'views/views.xml',
         'views/templates.xml',
     ],

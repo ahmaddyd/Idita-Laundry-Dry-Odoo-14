@@ -22,7 +22,7 @@ class OrderCuci(models.Model):
     @api.model
     def _compute_tanggal(self):
         for record in self:
-            tgl = self.env['idita.laundry_selesai'].search([('name', '=', record.id)]).mapped('tgl_selesai')
+            tgl = self.env['idita.laundry_selesai'].search([('name', '=', record.id)]).mapped('tanggal_selesai')
             if tgl:
                 record.tanggal_selesai = tgl[0]
                 record.selesai_cuci = True

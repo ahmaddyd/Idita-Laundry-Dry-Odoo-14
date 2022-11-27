@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="laundry_teknik_view_tree" model="ir.ui.view">
+            <field name="name">Teknik Laundry Idita</field>
+            <field name="model">idita.laundry_teknik</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="harga"/>
+                    <field name="kotoran"/>
+                    <field name="air"/>
+                    <field name="tersedia"/>
+                    <field name="teknikpencucian"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="laundry_teknik_view_form" model="ir.ui.view">
+            <field name="name">Form Teknik Laundry</field>
+            <field name="model">idita.laundry_teknik</field>
+            <field name="arch" type="xml">
+                <form string="Daftar Harga Cucian">
+                    <sheet>
+                        <group>
+                            <group colspan='4'>
+                                <group colspan='2'>
+                                    <separator string="TEKNIK DAN BAHAN"/>
+                                    <field name="name"/>
+                                    <field name="air"/>
+                                </group>
+                                <group colspan='2'>
+                                    <separator string="KOTORAN"/>
+                                    <field name="kotoran"/>
+                                    <field name="harga"/>
+                                    <field name="tersedia"/>
+                                </group>
+                                <notebook colspan='4'>
+                                    <page string="DESKRIPSI PENCUCIAN">
+                                        <field name="teknikpencucian"/>
+                                    </page>
+                                    <page string="JENIS CUCIAN">
+                                        <field name="models_ids"/>
+                                    </page>
+                                    <page string="MANAGER">
+                                        <field name="pegawai_id"/>
+                                    </page>
+                                </notebook>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="laundry_teknik_action" model="ir.actions.act_window">
+            <field name="name">Jenis Teknik Laundry and Dry Idita</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">idita.laundry_teknik</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_smiling_face">
+                    Diisi dengan daftar CARA cucian
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="laundry_teknik_menu_act"
+                  name="Teknik Cucian"
+                  parent="laundry_master_menu_categ"
+                  action="laundry_teknik_action"
+                  sequence="20"/>
+    </data>
+</odoo>
