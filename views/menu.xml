@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="laundry_idita_menu_root" name="Laundry and Dry Idita" sequence="10"/>
+
+        <menuitem id="laundry_master_menu_categ"
+                  name="Operasional"
+                  parent="laundry_idita_menu_root"
+                  sequence="10"/>
+
+        <menuitem id="laundry_contact_menu_categ"
+                  name="Kontak"
+                  parent="laundry_idita_menu_root"
+                  sequence="11"/>
+
+        <menuitem id="laundry_order_menu_categ"
+                  name="Order"
+                  parent="laundry_idita_menu_root"
+                  sequence="12"/>
+
+        <menuitem id="laundry_pembelian_menu_categ"
+                  name="Pembelian"
+                  parent="laundry_idita_menu_root"
+                  sequence="13"/>
+
+        <menuitem id="laundry_akunting_menu_categ"
+                  name="Akunting"
+                  parent="laundry_idita_menu_root"
+                  sequence="14"/>
+    </data>
+</odoo>
