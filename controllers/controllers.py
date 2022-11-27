@@ -1,21 +1,44 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
+from odoo import http, models, fields
+from odoo.http import request
+import json
 
 
-# class IditaLaundry(http.Controller):
-#     @http.route('/idita_laundry/idita_laundry/', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
+class Iditalaundry(http.Controller):
+    @http.route('/bahancuci', auth='public')
+    def get_models(self, **kwargs):
+        order = request.env['idita.jenis_laundry'].search([])
+        value = []
+        for ord in order:
+            value.append({
+                'nama': ord.name,
+                'ukuran': ord.ukuran,
+                'tipe': ord.tipe
+            })
+        return json.dumps(value)
 
-#     @http.route('/idita_laundry/idita_laundry/objects/', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('idita_laundry.listing', {
-#             'root': '/idita_laundry/idita_laundry',
-#             'objects': http.request.env['idita_laundry.idita_laundry'].search([]),
-#         })
+    @http.route('/caracuci', auth='public')
+    def get_caracuci(self, **kwargs):
+        caracuci = request.env['idita.laundry_teknik'].search([])
+        value = []
+        for cc in caracuci:
+            value.append({
+                'nama': cc.name,
+                'tingkat_kotoran': cc.kotoran,
+                'jenis_air': cc.air,
+                'harga_per_kg': cc.harga
+            })
+        return json.dumps(value)
 
-#     @http.route('/idita_laundry/idita_laundry/objects/<model("idita_laundry.idita_laundry"):obj>/', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('idita_laundry.object', {
-#             'object': obj
-#         })
+    @http.route('/akunting', auth='public')
+    def get_akunting(self, **kwargs):
+        akunting = request.env['idita.laundry_akunting'].search([])
+        value = []
+        for ak in akunting:
+            value.append({
+                'nama': ak.name,
+                'tanggal': str(ak.date),
+                'debet': ak.debet,
+                'kredit': ak.kredit,
+                'saldo': ak.saldo
+            })
+        return json.dumps(value)
