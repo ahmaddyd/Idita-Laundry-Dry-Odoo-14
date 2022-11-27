@@ -78,7 +78,7 @@ class DetailCucian(models.Model):
 
     name = fields.Char(string='Kode Order')
     order_id = fields.Many2one(comodel_name='idita.laundry_order', string='Order Id')
-    jenis = fields.Many2one(comodel_name='idita.jenis_laundry', string='Bahan Cucian')
+    jenis = fields.Many2one(comodel_name='idita.jenis_laundry', string='Jenis Laundry')
     harga = fields.Integer(compute='_compute_harga', string='Harga per Kg')
 
     @api.depends('jenis')
@@ -86,11 +86,11 @@ class DetailCucian(models.Model):
         for record in self:
             record.harga = record.jenis.harga
 
-    berat = fields.Integer(string='Berat Cucian')
+    berat = fields.Integer(string='Berat Laundry')
 
     @api.depends('berat')
     def _compute_field_name(self):
         for record in self:
             record.jumlah_harga = record.berat * record.harga
 
-    jumlah_harga = fields.Integer(compute='_compute_field_name', string='Jumlah Harga')
+    jumlah_harga = fields.Integer(compute='_compute_field_name', string='Total Harga Laundry')

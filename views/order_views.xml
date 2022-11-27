@@ -36,7 +36,7 @@
                             </group>
 
                             <notebook colspan='4'>
-                                <page name="bahan_cuci" string="Bahan Cuci">
+                                <page name="jenis_laundry" string="Jenis Laundry">
                                     <field name="detailcucian_ids">
                                         <tree editable="bottom">
                                             <field name="jenis"/>
@@ -55,7 +55,7 @@
     </record>
 
     <record id="laundry_order_action" model="ir.actions.act_window">
-        <field name="name">DAFTAR ORDER CUCIAN</field>
+        <field name="name">List Order Laundry</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">idita.laundry_order</field>
         <field name="view_mode">tree,form</field>
