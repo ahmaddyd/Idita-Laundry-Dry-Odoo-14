@@ -26,13 +26,17 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/order_views.xml',
-        'views/akunting_views.xml',
-        'views/laundry_selesai_views.xml',
-        'views/jenis_laundry_views.xml',
         'views/teknik_laundry_views.xml',
+        'views/jenis_laundry_views.xml',
+        'views/order_views.xml',
+        'views/laundry_contact_views.xml',
+        'views/laundry_contact_pegawai_views.xml',
+        'views/bahan_laundry_views.xml',
+        'views/supplier_laundry_views.xml',
+        'views/laundry_selesai_views.xml',
+        'views/akunting_views.xml',
         'views/views.xml',
-        'views/templates.xml',
+        'views/templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

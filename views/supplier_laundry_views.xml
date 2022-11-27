@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="supplier_laundry_view_tree" model="ir.ui.view">
+        <field name="name">Supplier Laundry</field>
+        <field name="model">idita.supplier_laundry</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alamat"/>
+                <field name="cp"/>
+                <field name="telp"/>
+                <field name="bahanalat"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="supplier_laundry_view_form" model="ir.ui.view">
+        <field name="name">Form Supplier Laundry</field>
+        <field name="model">idita.supplier_laundry</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="alamat"/>
+                        <field name="cp"/>
+                        <field name="telp"/>
+                    </group>
+
+                    <notebook>
+                        <page name="bahan_alat" string="Barang Supply">
+                            <field name="bahanalat">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="harga"/>
+                                    <field name="unit"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="supplier_laundry_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">idita.supplier_laundry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="supplier_laundry_menu_act"
+              name="Daftar Supplier"
+              parent="laundry_pembelian_menu_categ"
+              action="supplier_laundry_action"
+              sequence="10"/>
+</odoo>

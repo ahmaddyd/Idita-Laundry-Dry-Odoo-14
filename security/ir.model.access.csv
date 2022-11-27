@@ -6,3 +6,5 @@ access_idita_laundry_akunting,access.idita.laundry_akunting,model_idita_laundry_
 access_idita_model_laundry,access.idita.model_laundry,model_idita_model_laundry,,1,1,1,1
 access_idita_jenis_laundry,access.idita.jenis_laundry,model_idita_jenis_laundry,,1,1,1,1
 access_idita_laundry_teknik,access.idita.laundry_teknik,model_idita_laundry_teknik,,1,1,1,1
+access_idita_bahan_laundry,access.idita.bahan_laundry,model_idita_bahan_laundry,,1,1,1,1
+access_idita_supplier_laundry,access.idita.supplier_laundry,model_idita_supplier_laundry,,1,1,1,1

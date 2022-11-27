@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bahan_laundry_view_tree" model="ir.ui.view">
+        <field name="name">Bahan dan Alat Pencucian</field>
+        <field name="model">idita.bahan_laundry</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="harga"/>
+                <field name="unit"/>
+                <field name="stok"/>
+                <field name="suppliernya"/>
+                <field name="telp"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bahan_laundry_view_form" model="ir.ui.view">
+        <field name="name">Bahan dan Alat Pencucian</field>
+        <field name="model">idita.bahan_laundry</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="harga"/>
+                        <field name="unit"/>
+                        <field name="suppliernya"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bahan_laundry_action" model="ir.actions.act_window">
+        <field name="name">Bahan dan Alat Cuci</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">idita.bahan_laundry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="wikulaundry_bahanalatcuci_menu_act"
+              name="Bahan dan Alat"
+              parent="laundry_pembelian_menu_categ"
+              action="bahan_laundry_action"
+              sequence="20"/>
+</odoo>

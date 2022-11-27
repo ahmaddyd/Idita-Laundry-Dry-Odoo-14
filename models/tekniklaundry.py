@@ -20,5 +20,5 @@ class LaundryTeknik(models.Model):
     tersedia = fields.Boolean(string='Tersedia', default=True)
     teknikpencucian = fields.Char(string='Deskripsi Teknik Pencucian',
                                   help='isi dengan alat yang digunakan untuk mencuci')
-    models_ids = fields.One2many(comodel_name='idita.jenis_laundry', inverse_name='teknik_id', string='jenis cucian')
+    models_ids = fields.One2many(comodel_name='idita.jenis_laundry', inverse_name='teknik_id', string='Jenis Cucian')
     pegawai_id = fields.Many2one(comodel_name='res.partner', string='MANAGER', domain="[('is_pegawainya','=',True)]")
