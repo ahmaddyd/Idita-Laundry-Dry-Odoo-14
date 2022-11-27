@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_idita_laundry_idita_laundry,idita_laundry.idita_laundry,model_idita_laundry_idita_laundry,base.group_user,1,1,1,1
+access_idita_laundry_order,access.idita.laundry_order,model_idita_laundry_order,,1,1,1,1
+access_idita_laundry_detail,access.idita.laundry_detail,model_idita_laundry_detail,,1,1,1,1
