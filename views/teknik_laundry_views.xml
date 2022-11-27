@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="laundry_teknik_view_tree" model="ir.ui.view">
+        <record id="teknik_laundry_view_tree" model="ir.ui.view">
             <field name="name">Teknik Laundry Idita</field>
             <field name="model">idita.laundry_teknik</field>
             <field name="arch" type="xml">
@@ -16,8 +16,8 @@
             </field>
         </record>
 
-        <record id="laundry_teknik_view_form" model="ir.ui.view">
-            <field name="name">Form Teknik Laundry</field>
+        <record id="teknik_laundry_view_form" model="ir.ui.view">
+            <field name="name">teknik.laundry.view.form</field>
             <field name="model">idita.laundry_teknik</field>
             <field name="arch" type="xml">
                 <form string="Daftar Harga Cucian">

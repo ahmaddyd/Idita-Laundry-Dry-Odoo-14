@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pemesanan_laundry_view_tree" model="ir.ui.view">
+        <field name="name">Pemesanan Laundry</field>
+        <field name="model">idita.pemesanan_laundry</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button name="masukakunting" string="Masuk Akunting" class="btn btn-success" type="object"/>
+                    <button name="keluarakunting" string="Keluar Akunting" class="btn btn-warning ml-1" type="object"/>
+                </header>
+                <field name="name"/>
+                <field name="supplier"/>
+                <field name="contact"/>
+                <field name="tanggal_pesan"/>
+                <field name="tanggal_masuk"/>
+                <field name="jumlah_pesanan"/>
+                <field name="tagihan_supplier"/>
+                <field name="masuk_akunting"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="pemesanan_laundry_view_form" model="ir.ui.view">
+        <field name="name">Form Pemesanan Barang</field>
+        <field name="model">idita.pemesanan_laundry</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="supplier"/>
+                        <field name="contact"/>
+                        <field name="tanggal_pesan"/>
+                        <field name="jumlah_pesanan"/>
+                        <field name="tagihan_supplier"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="pemesanan_laundry_action" model="ir.actions.act_window">
+        <field name="name">Pemesanan Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">idita.pemesanan_laundry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="pemesanan_laundry_menu_act"
+              name="Pemesanan Barang"
+              parent="laundry_pembelian_menu_categ"
+              action="pemesanan_laundry_action"
+              sequence="30"/>
+</odoo>

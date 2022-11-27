@@ -21,7 +21,7 @@ class IditaLaundry(models.Model):
     name = fields.Char(string='Jenis Cucian', required=True)
     active = fields.Boolean(default=True)
     deskripsi = fields.Char(string='Deskripsi')
-    teknik_id = fields.Many2one(comodel_name='idita.laundry_teknik', string='teknik cuci', required=True, delegate=True)
+    teknik_id = fields.Many2one(comodel_name='idita.laundry_teknik', string='Teknik Pencucian', required=True, delegate=True)
     teknik_pencucian = fields.Char(compute='_compute_teknik_pencucian', string='Teknik Pencucian')
 
     @api.depends('teknik_id')
@@ -38,7 +38,7 @@ class IditaLaundry(models.Model):
                     'message': "Rubah teknik pencucian ke golongan B"
                 },
             }
-        elif self.tipe == 'polyester':
+        elif self.tipe == 'kulit':
             return {
                 'warning': {
                     'title': "Teknik Pencucian",

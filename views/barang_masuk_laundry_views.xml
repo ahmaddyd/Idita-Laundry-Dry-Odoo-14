@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="barang_masuk_laundry_view_tree" model="ir.ui.view">
+        <field name="name">Masuk Barang</field>
+        <field name="model">idita.barang_masuk_laundry</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="suppliernya"/>
+                <field name="tgl_pesan"/>
+                <field name="tgl_datang"/>
+                <field name="tagihan"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="barang_masuk_laundry_view_form" model="ir.ui.view">
+        <field name="name">Input Barang Masuk</field>
+        <field name="model">idita.barang_masuk_laundry</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="suppliernya"/>
+                        <field name="tgl_pesan"/>
+                        <field name="tgl_datang"/>
+                        <field name="tagihan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="barang_masuk_laundry_action" model="ir.actions.act_window">
+        <field name="name">Barang Masuk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">idita.barang_masuk_laundry</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="barang_masuk_laundry_menu_act"
+              name="Masuk Barang"
+              parent="laundry_pembelian_menu_categ"
+              action="barang_masuk_laundry_action"
+              sequence="40"/>
+</odoo>

@@ -8,3 +8,5 @@ access_idita_jenis_laundry,access.idita.jenis_laundry,model_idita_jenis_laundry,
 access_idita_laundry_teknik,access.idita.laundry_teknik,model_idita_laundry_teknik,,1,1,1,1
 access_idita_bahan_laundry,access.idita.bahan_laundry,model_idita_bahan_laundry,,1,1,1,1
 access_idita_supplier_laundry,access.idita.supplier_laundry,model_idita_supplier_laundry,,1,1,1,1
+access_idita_pemesanan_laundry,access.idita.pemesanan_laundry,model_idita_pemesanan_laundry,,1,1,1,1
+access_idita_barang_masuk_laundry,access.idita.barang_masuk_laundry,model_idita_barang_masuk_laundry,,1,1,1,1
