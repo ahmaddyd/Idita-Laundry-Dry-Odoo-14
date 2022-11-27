@@ -26,6 +26,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/order_views.xml'
+        'views/laundry_selesai_views.xml'
         'views/views.xml',
         'views/templates.xml',
     ],
