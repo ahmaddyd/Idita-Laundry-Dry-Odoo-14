@@ -37,6 +37,8 @@
         'views/akunting_views.xml',
         'views/pemesanan_laundry_views.xml',
         'views/barang_masuk_laundry_views.xml',
+        'report/report.xml',
+        'report/laundry_order_report.xml',
         'views/views.xml',
         'views/templates.xml'
     ],
