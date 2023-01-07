@@ -5,18 +5,18 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
                     <div style="margin-top:150px">
-                        <t t-call="idita_laundry.report_idita_laundry_order"/>
+                        <t t-call="Idita-Laundry-Dry-Odoo-14.report_idita_laundry_order"/>
                     </div>
                 </t>
             </t>
         </template>
 
         <record id="action_report_wo_order" model="ir.actions.report">
-            <field name="name">Report Order Laundry</field>
+            <field name="name">Idita Laundry Invoice</field>
             <field name="model">idita.laundry_order</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">idita_laundry.report_laundry_order</field>
-            <field name="report_file">idita_laundry.report_laundry_order</field>
+            <field name="report_name">Idita-Laundry-Dry-Odoo-14.report_laundry_order</field>
+            <field name="report_file">Idita-Laundry-Dry-Odoo-14.report_laundry_order</field>
             <field name="binding_model_id" ref="model_idita_laundry_order"/>
             <field name="binding_type">report</field>
         </record>
